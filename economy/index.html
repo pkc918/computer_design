@@ -1,0 +1,255 @@
+﻿<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>index</title>
+   <link rel="stylesheet" href="css/comon0.css">
+</head>
+
+<body>
+   <div class="loading">
+      <div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
+   </div>
+   <div class="head">
+      <h1>全国经济发展数据可视化</h1>
+      <div class="name"><a href="../home.html">首页</a></div>
+      <div class="time" id="showTime">2019年12月05日16时16分54秒</div>
+      <script>
+         var t = null;
+         t = setTimeout(time, 1000);//開始运行
+         function time () {
+            clearTimeout(t);//清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();//获取时
+            var m = dt.getMinutes();//获取分
+            var s = dt.getSeconds();//获取秒
+            var t = null;
+            document.getElementById("showTime").innerHTML = y + "年" + Appendzero(mt) + "月" + Appendzero(day) + "日" + Appendzero(h) + "时" + Appendzero(m) + "分" + Appendzero(s) + "秒";
+            function Appendzero (obj) {
+               if (obj < 10) return "0" + "" + obj;
+               else return obj;
+            }
+            t = setTimeout(time, 1000); //设定定时器，循环运行     
+         }
+      </script>
+   </div>
+   <div class="mainbox">
+      <ul class="clearfix">
+         <li>
+            <div class="boxall" style="height: calc(15% - .15rem)">
+               <ul class="row h100 row1">
+                  <li class="col-4">
+                     <div class="bar1"><img src="images/icon1.png">
+                        <h3><span>公司数量</span>2907w家</h3>
+                     </div>
+                  </li>
+                  <li class="col-4">
+                     <div class="bar1"><img src="images/icon4.png">
+                        <h3><span>工厂数量</span>348947个</h3>
+                     </div>
+                  </li>
+                  <li class="col-4">
+                     <div class="bar1"><img src="images/icon5.png">
+                        <h3 style="text-align: left; font-size: 18px;"><span>就业人员
+                           </span>74652万人</h3>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="boxall" style="height: calc(43% - .15rem)">
+
+               <ul class="sec h100">
+                  <li>
+                     <div>
+                        <p><img src="images/icon4.png">进口货运量</p>
+                        <div class="barnav">
+                           <div class="bar2"><span style="width:84.9%;"></span></div> <span>24,557.4万吨</span>
+                        </div>
+                     </div>
+
+                     <div>
+                        <div class="zaf">
+                           <p>同比</p>
+                           <p><span>15.1<i>%</i></span><img src="images/down.png"></p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li>
+                     <div>
+                        <p><img src="images/icon5.png">出口货运量</p>
+
+                        <div class="barnav">
+                           <div class="bar2"><span style="width:91.1%;"></span></div> <span>13,876.3万吨</span>
+                        </div>
+                     </div>
+
+                     <div>
+                        <div class="zaf">
+                           <p>同比</p>
+                           <p><span>8.9<i>%</i></span><img src="images/down.png"></p>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li>
+                     <div>
+                        <p><img src="images/icon6.png">监管运输工具总数</p>
+                        <div class="barnav">
+                           <div class="bar2"><span style="width:40.5%;"></span></div> <span>101.714万艘</span>
+                        </div>
+                     </div>
+
+                     <div>
+                        <div class="zaf">
+                           <p>同比</p>
+                           <p><span>59.5<i>%</i></span><img src="images/down.png"></p>
+                        </div>
+                     </div>
+                  </li>
+
+               </ul>
+
+            </div>
+            <div class="boxall" style="height: calc(42% - .15rem)">
+               <div class="alltitle">CPI和PPI季度涨跌比</div>
+               <div class="boxnav" id="echarts2"></div>
+            </div>
+         </li>
+         <li>
+            <div class="boxall" style="height: calc(20% - .15rem)">
+               <ul class="row h100 clearfix">
+                  <li class="col-6">
+                     <div class="sqzs h100">
+                        <p>宏观经济情况</p>
+                        <h1 style="font-size: 55px;">145401w+人</h1>
+                     </div>
+                  </li>
+                  <li class="col-6">
+                     <ul class="row h100 clearfix">
+                        <li class="col-4">
+                           <div class="tit01">居民恩格尔系数(%)</div>
+                           <div class="piebox" id="pe01"></div>
+                        </li>
+                        <li class="col-4">
+                           <div class="tit01">城镇居民恩格尔系数</div>
+                           <div class="piebox" id="pe02"></div>
+                        </li>
+                        <li class="col-4">
+                           <div class="tit01">农村居民恩格尔系数</div>
+                           <div class="piebox" id="pe03"></div>
+                        </li>
+                     </ul>
+
+                  </li>
+               </ul>
+            </div>
+            <div class="boxall" style="height: calc(80% - .15rem)">
+               <div class="boxnav h100" id="echarts1"></div>
+            </div>
+         </li>
+         <li>
+
+            <div class="boxall" style="height: calc(15% - .15rem)">
+
+               <ul class="row h100 row1">
+                  <li class="col-4">
+                     <div class="bar1 bar2"><img src="images/icon7.png">
+                        <h3 style="text-align: left; font-size: 18px;"><span>进口总额
+                           </span>173661亿元</h3>
+                     </div>
+                  </li>
+                  <li class="col-4">
+                     <div class="bar1 bar2"><img src="images/icon8.png">
+                        <h3 style="text-align: left; font-size: 18px;"><span>粮食产量</span>13657亿斤</h3>
+                     </div>
+                  </li>
+                  <li class="col-4">
+                     <div class="bar1 bar2"><img src="images/icon9.png">
+                        <h3 style="text-align: left; font-size: 18px;"><span>出口总额</span>217348亿元</h3>
+                     </div>
+                  </li>
+               </ul>
+
+
+            </div>
+            <div class="boxall" style="height: calc(43% - .15rem)">
+               <div class="alltitle">全球综合排名</div>
+               <div class=" boxnav" id="lastecharts">
+               </div>
+
+            </div>
+            <div class="boxall" style="height: calc(42% - .15rem)">
+               <div class="alltitle">全国GDP(亿元) Top5</div>
+               <div class=" boxnav paim">
+                  <ul class="h100">
+                     <li>
+                        <span>1</span>
+                        <div class="pmnav">
+                           <p>上海</p>
+                           <div class="pmbar"><span style="width:90%"></span><i>43214.85</i></div>
+                        </div>
+                     </li>
+                     <li>
+                        <span>2</span>
+                        <div class="pmnav">
+                           <p>北京</p>
+                           <div class="pmbar"><span style="width:88%"></span><i>40269.60</i></div>
+                        </div>
+                     </li>
+                     <li>
+                        <span>3</span>
+                        <div class="pmnav">
+                           <p>深圳</p>
+                           <div class="pmbar"><span style="width:75%"></span><i>30000.00+</i></div>
+                        </div>
+                     </li>
+                     <li>
+                        <span>4</span>
+                        <div class="pmnav">
+                           <p>广州</p>
+                           <div class="pmbar"><span style="width:68%"></span><i>28231.97</i></div>
+                        </div>
+                     </li>
+                     <li>
+                        <span>5</span>
+                        <div class="pmnav">
+                           <p>重庆</p>
+                           <div class="pmbar"><span style="width:65%"></span><i>27894.02</i></div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         var arr = [];
+         var max;
+         $(".paim li i").each(function () {
+            arr.push($(this).text());
+         })
+         //alert(arr)
+         max = Math.max.apply(null, arr);
+         $(".paim .pmbar span").each(function () {
+            var i = $(this).parents("li").index()
+            w = arr[i] / max * 100;
+            sw = w.toFixed(0) + '%'
+
+            $(this).css({ width: sw })
+         })
+      })
+   </script>
+   <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.2/echarts.min.js"></script>
+   <script language="JavaScript" src="js/js.js"></script>
+
+</body>
+
+</html>

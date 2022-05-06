@@ -1,0 +1,305 @@
+﻿<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>index</title>
+   <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
+   <!-- Bootstrap core CSS -->
+   <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/style.css">
+   <script>
+      var t = null
+      t = setTimeout(time, 1000)//開始运行
+      function time () {
+         clearTimeout(t)//清除定时器
+         dt = new Date()
+         var y = dt.getFullYear()
+         var mt = dt.getMonth() + 1
+         var day = dt.getDate()
+         var h = dt.getHours()//获取时
+         var m = dt.getMinutes()//获取分
+         var s = dt.getSeconds()//获取秒
+         document.getElementById("showTime").innerHTML = y + "年" + Appendzero(mt) + "月" + Appendzero(day) + "日" + Appendzero(h) + "时" + Appendzero(m) + "分" + Appendzero(s) + "秒";
+         function Appendzero (obj) {
+            if (obj < 10) return "0" + "" + obj;
+            else return obj;
+         }
+         t = setTimeout(time, 1000) //设定定时器，循环运行
+      }
+   </script>
+</head>
+
+<body>
+   <div class="head clearfix">
+      <h1 class="">COVID-19 疫情防控可视化平台</h1>
+      <div class="name"><a href="../home.html">首页</a></div>
+      <div class="time" id="showTime"></div>
+
+   </div>
+   <div class="mainbox">
+
+      <ul class="clearfix nav1">
+         <li style="width: 26%">
+            <div class="box">
+               <div class="tit"><span id="districtThings">北京目前情况</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" style="height: 320px;">
+                  <ul id="dailySitua" class="drqk clearfix">
+                     <li>
+                        <div class="icon"><img src="images/icona.png"></div>
+                        <div><span>总共确诊人数</span>
+                           <p><em id="total">2242</em><i>人</i></p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="icon"><img src="images/iconb.png"></div>
+                        <div><span>累计治愈人数</span>
+                           <p><em id="zhiyu">1842</em><i>人</i></p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="icon"><img src="images/icond.png"></div>
+                        <div><span>现有确诊人数</span>
+                           <p><em id="quezhen">391</em><i>人</i></p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="icon"><img src="images/iconf.png"></div>
+                        <div><span>疑是感染人数</span>
+                           <p><em id="doubt">164</em><i>人</i></p>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="icon"></div>
+                        <div><span>累计死亡人数</span>
+                           <p><em id="siwang">9</em><i>人</i></p>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="box">
+               <div class="tit"><span>动态清零计划</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" style="height:140px;">
+                  <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tbody>
+                        <tr>
+                           <td>5月5日，哈尔滨主城区6天社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>5月3日，苏州市连续五天社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>4月28日山东烟台初步实现社会面“动态清零”。</td>
+                        </tr>
+                        <tr>
+                           <td>4月24日辽宁沈阳实现社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>4月20日，云南马关县社会面全面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>4月20号，安徽六安市已实现社会面动态清零。</td>
+                        </tr>
+                        <tr>
+                           <td>4月14日，吉林省实现社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>4月7日，河北博野县连续3天社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>3月19日，陕西汉中市社会面清零。</td>
+                        </tr>
+                        <tr>
+                           <td>2月15日，广西百色疫情社区传播链基本阻断，社会面基本实现清零。</td>
+                        </tr>
+                        <tr>
+                           <td>1月21日，天津宣布实现社会面清零。</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="box">
+               <div class="tit"><span>热点词云</span>
+                  <p></p>
+               </div>
+               <div class="boxnav tagcloud" style="height: 250px;">
+                  <a class="b01 co01" href="https://news.qq.com/zt2020/page/feiyan.htm#">新冠病毒疾病</a>
+                  <a class="b01 co01"
+                     href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202012/t20201216_505872.html">健康码</a>
+                  <a class="b02 co02"
+                     href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202012/t20201216_505872.html">复工复产</a>
+                  <a class="b03 co04"
+                     href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202012/t20201216_505872.html">方舱医院</a>
+                  <a class="b01 co04"
+                     href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202012/t20201216_505872.html">无接触配送</a>
+                  <a class="b01 co04" href="https://m.gmw.cn/baijia/2022-01/08/1302754621.html">超级传播者</a>
+                  <a class="b01 co04"
+                     href="https://gongyi.cctv.com/2021/10/21/ARTIcHgDlYwm3nenW3WgeoWk211021.shtml">社交距离</a>
+                  <a class="b03 co05"
+                     href="http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202012/t20201216_505872.html">健康码</a>
+                  <a class="b03 co05" href="http://www.nrta.gov.cn/col/col3719/index.html">中国加油</a>
+                  <a class="b01 co05" href="http://www.xinyi.gov.cn/zwfw/bmts/content/post_986970.html">密接者和次密接者</a>
+                  <a class="b03 co05" href="http://www.gov.cn/xinwen/2022-05/04/content_5688547.htm">抗疫</a>
+               </div>
+            </div>
+         </li>
+         <li style="width:48%">
+            <div class="box" style="position: relative">
+               <div class="map">
+                  <div class="map1"><img src="images/lbx.png"></div>
+                  <div class="map2"><img src="images/jt.png"></div>
+                  <div class="map3"><img src="images/map.png"></div>
+               </div>
+               <div class="" id="map" style="height: 557px; position: relative; z-index: 100"></div>
+
+            </div>
+            <div class="box">
+               <div class="tit"><span>各地疫情防控政策措施专题</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" style="height: 250px;">
+                  <div id="boxnavMain">
+                  </div>
+               </div>
+            </div>
+         </li>
+         <li style="width: 26%">
+            <div class="box">
+               <div class="tit"><span>全国疫苗接种</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" id="" style="height: 280px;">
+                  <ul class="tqdb">
+                     <li>
+                        <div id="echart1"></div>
+                        <h3>接种覆盖人数</h3>
+                     </li>
+                     <li>
+                        <div id="echart2"></div>
+                        <h3>全程接种人数</h3>
+                     </li>
+                     <li>
+                        <div id="echart3"></div>
+                        <h3>完成加强接种</h3>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="box">
+               <div class="tit"><span>国内新增 Top5</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" style="height: 180px;" id="echart7">
+               </div>
+            </div>
+
+            <div class="box">
+               <div class="tit"><span>新闻动态</span>
+                  <p></p>
+               </div>
+               <div class="boxnav" style="height: 250px;">
+                  <div id="carouselExampleControls" style="height: 250px;" data-interval="2000" class="carousel slide"
+                     data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <a href="http://www.gov.cn/xinwen/2022-05/02/content_5688454.htm#1">
+                              <img
+                                 src="http://www.gov.cn/xinwen/2022-05/02/5688454/images/0cd7f2d047a944818d0be3f78e4a45d2.jpg"
+                                 class="d-block h-100" alt="...">
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="http://www.gov.cn/xinwen/2022-04/30/content_5688312.htm#1">
+                              <img
+                                 src="http://www.gov.cn/xinwen/2022-04/30/5688312/images/e8741e2ce1344c2a9b1f19eae9f8b404.JPG"
+                                 class="d-block h-100" alt="...">
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="https://sh.cctv.com/2022/04/27/ARTIHAOpWzU7raMGR9h10bCH220427.shtml">
+                              <img
+                                 src="https://p4.img.cctvpic.com/photoworkspace/contentimg/2022/04/27/2022042710405778261.jpg"
+                                 class="d-block h-100" alt="...">
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="http://www.news.cn/politics/2022-03/30/c_1128518055.htm">
+                              <img src="http://www.news.cn/politics/2022-03/30/1128518055_16486508394961n.png"
+                                 class="d-block h-100" alt="...">
+                           </a>
+                        </div>
+                        <div class="carousel-item">
+                           <a href="https://news.cctv.com/2022/04/19/ARTIHH9YELgaxqUWnqOF9f9F220419.shtml">
+                              <img
+                                 src="https://p3.img.cctvpic.com/photoworkspace/contentimg/2022/04/19/2022041911223826751.jpg"
+                                 class="d-block h-100" alt="...">
+                           </a>
+                        </div>
+                     </div>
+                     <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                     </button>
+                     <button class="carousel-control-next" type="button" data-target="#carouselExampleControls"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </li>
+      </ul>
+   </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.2/echarts.min.js"></script>
+<script type="text/javascript" src="./js/Bubble.js"></script>
+<script>
+   (function () {
+      const baseURL = 'https://lab.isaaclin.cn';
+      axios.get(`${baseURL}/nCoV/api/area`).then(({ data }) => {
+         const {
+            confirmedCount,
+            currentConfirmedCount,
+            curedCount,
+            deadCount,
+            suspectedCount
+         } = data.results[0];
+         $("#total").text(confirmedCount);
+         $("#zhiyu").text(curedCount);
+         $("#quezhen").text(currentConfirmedCount);
+         $("#siwang").text(deadCount);
+         $("#doubt").text(suspectedCount)
+      })
+   })()
+   /* 词云 */
+   /*3D标签云*/
+   tagcloud({
+      selector: ".tagcloud", //元素选择器
+      fontsize: 6, //基本字体大小, 单位px
+      radius: 80, //滚动半径, 单位px 页面宽度和高度的五分之一
+      mspeed: "slow", //滚动最大速度, 取值: slow, normal(默认), fast
+      ispeed: "slow", //滚动初速度, 取值: slow, normal(默认), fast
+      direction: 0, //初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...
+      keep: false //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
+   }
+   );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/area_echarts.js"></script>
+<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script> -->
+<script type="text/javascript" src="js/js.js"></script>
+
+</html>
