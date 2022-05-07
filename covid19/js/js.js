@@ -185,63 +185,102 @@
    function echarts_7 () {
       // 基于准备好的dom，初始化echarts实例
       var myChart = echarts.init(document.getElementById('echart7'));
-      option = {
+      let option = {
          tooltip: {
             trigger: 'axis',
             axisPointer: {
-               type: 'shadow'
+               type: 'cross',
+               label: {
+                  backgroundColor: '#6a7985'
+               }
+            }
+         },
+         legend: {
+            data: ['投入资金'],
+            textStyle: {
+               color: "#fff"
+            }
+         },
+         toolbox: {
+            feature: {
+               saveAsImage: {}
             }
          },
          grid: {
-            left: '0%',
-            top: '15px',
-            right: '0%',
-            bottom: '0%',
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
             containLabel: true
          },
-         xAxis: {
-            data: ['台湾', '上海', '香港', '北京', '河南'],
-            axisLine: { show: false, },
-            axisLabel: {
-               color: '#fff',
-               fontSize: 12
+         xAxis: [
+            {
+               type: 'category',
+               boundaryGap: false,
+               axisLabel: {
+                  show: true,
+                  textStyle: {
+                     color: "#fff"
+                  },
+                  lineStyle: {
+                     color: "#fff"
+                  },
+               },
+
+               data: [
+                  '2月8日',
+                  '2月23日',
+                  '3月4日',
+                  '3月底',
+                  '4月19日',
+                  '4月31日',
+                  '5月31日',
+                  '6月底',
+                  '7月',
+                  '11月底'
+               ]
             }
-         },
-         yAxis: {
-            name: "（人）",
-            nameTextStyle: {
-               color: '#fff',
-               fontSize: 14
-            },
-            axisLine: { show: false, },
-            axisLabel: {
-               color: '#fff',
-               fontSize: 12
-            },
-            splitLine: { show: false, },
-            interval: 200,
-            max: 1000
-
-         },
-         series: [{
-            type: 'bar',
-            barWidth: '30%',
-
-            itemStyle: {
-
-               normal: {
-                  barBorderRadius: 50,
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                     offset: 0,
-                     color: '#01fdcc'
-                  }, {
-                     offset: 0.8,
-                     color: '#11a1d8'
-                  }], false)
-               }
-            },
-            data: [58460, 263, 102, 43, 18]
-         }]
+         ],
+         yAxis: [
+            {
+               type: 'value',
+               name: '单位（亿元）',
+               color: "#fff",
+               axisLabel: {
+                  textStyle: {
+                     color: "#fff"
+                  },
+               },
+            }
+         ],
+         series: [
+            {
+               name: '投入资金',
+               type: 'line',
+               stack: 'Total',
+               smooth: true,
+               lineStyle: {
+                  width: 0
+               },
+               showSymbol: false,
+               areaStyle: {
+                  opacity: 0.8,
+                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                     {
+                        offset: 0,
+                        color: 'rgb(128, 255, 165)'
+                     },
+                     {
+                        offset: 1,
+                        color: 'rgb(1, 191, 236)'
+                     }
+                  ])
+               },
+               emphasis: {
+                  focus: 'series'
+               },
+               data: [718.5, 995, 1104.8, 1371.86, 1452, 1499, 1624, 1756, 1864, 4000]
+            }
+         ]
       };
       // 使用刚指定的配置项和数据显示图表。
       myChart.setOption(option);
@@ -285,7 +324,7 @@
       "兵团": "http://www.xjbt.gov.cn/yqfk/sjzccs/",
    }
    for (let item in dataSource) {
-      let $button = `<a class="btn btn-primary" role="button" href="${dataSource[item]}">${item}</a>`
+      let $button = `<a class="btn btn-primary" target="_blank" role="button" href="${dataSource[item]}">${item}</a>`
       $("#boxnavMain").append($button)
    }
 })

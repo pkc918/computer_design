@@ -42,12 +42,12 @@
 </head>
 
 <body class="text-center main">
-   <video class="mainVideo" src="bg.mp4" muted autoplay loop></video>
+   <video class="mainVideo" src="http://114.117.164.236:9999/bg.mp4" muted autoplay loop></video>
 
    <div class="containerMain cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <footer class="mastfoot mt-auto">
-         <a class="btn btn-lg btn-secondary" href="./covid19/index.html">疫情数据可视化平台</a>
-         <a class="btn btn-lg btn-secondary" href="./economy/index.html">经济发展可视化平台</a>
+         <a class="btn btn-large btn-lg btn-secondary" href="./covid19/index.html">疫情数据可视化平台</a>
+         <a class="btn btn-large btn-lg btn-secondary" href="./economy/index.html">经济发展可视化平台</a>
          <div class="inner">
             数据均来源于网络
          </div>
@@ -62,6 +62,11 @@
 
    .containerMain {
       position: relative;
+   }
+
+   .btn-large {
+      margin: 0 12px;
+      padding: 20px;
    }
 
    .mainVideo {
