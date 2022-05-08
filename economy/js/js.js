@@ -376,7 +376,6 @@ $(function () {
                symbolSize: 5,
                showSymbol: false,
                lineStyle: {
-
                   normal: {
                      color: 'rgba(255, 128, 128, 1)',
                      width: 2
@@ -401,7 +400,7 @@ $(function () {
                      borderWidth: 12
                   }
                },
-               data: [0.3, 6.8, 9.0, 13.5, 9.1, 1.8]
+               data: [0.3, 6.8, 9.0, 13.5, 9.1, 8.3]
 
             },
          ]
